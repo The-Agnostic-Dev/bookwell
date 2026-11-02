@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    image: bookwell:local
+    ports:
+      - "5102:5102"
+    environment:
+      PORT: "5102"
+    restart: unless-stopped
