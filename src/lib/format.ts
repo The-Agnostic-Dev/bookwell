@@ -18,7 +18,7 @@ export function formatTimeRange(start: number, end: number): string {
 
 export function formatDuration(minutes: number): string {
   if (minutes < 60) return `${minutes} min`;
-  const hours = minutes / 60;
+  const hours = Math.floor(minutes / 60);
   const rest = minutes % 60;
   return rest ? `${hours}h ${rest}m` : `${hours}h`;
 }
