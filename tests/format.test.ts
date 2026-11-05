@@ -30,6 +30,11 @@ describe("formatDuration", () => {
     expect(formatDuration(60)).toBe("1h");
     expect(formatDuration(120)).toBe("2h");
   });
+
+  it("shows hours and minutes for durations over an hour", () => {
+    expect(formatDuration(90)).toBe("1h 30m");
+    expect(formatDuration(150)).toBe("2h 30m");
+  });
 });
 
 describe("formatDayChip", () => {
